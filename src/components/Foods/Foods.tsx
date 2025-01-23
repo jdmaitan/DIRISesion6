@@ -32,7 +32,7 @@ function Foods(props: FoodsProps)
                                 onClick={() => handleFoodClick(item)}>
                                 <img
                                     className="foodImg"
-                                    src={`/images/${item.image}`}
+                                    src={`images/${item.image}`}
                                     alt={item.name}
                                 />
                                 <div className="foodItem">

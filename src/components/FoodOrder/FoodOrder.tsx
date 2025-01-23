@@ -97,7 +97,7 @@ function FoodOrder(props: FoodOrderProps)
             <div className="food-details">
                 <h4>{props.food.name}</h4>
                 <div className="food-image-container">
-                    <img src={`/images/${props.food.image}`}
+                    <img src={`images/${props.food.image}`}
                         alt={props.food.name}
                         className="food-image" />
                 </div>
