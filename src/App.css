@@ -1,0 +1,53 @@
+/* App.css */
+.App {
+  font-family: sans-serif; /* Use a clean font */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background */
+}
+
+.title {
+  color: #333; /* Darker title text */
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  color: #555; /* Slightly lighter subtitle */
+  margin-bottom: 20px;
+}
+
+.ulApp {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  grid-gap: 20px; /* Spacing between items */
+  width: 90%; /* Occupy most of the container's width */
+  max-width: 900px; /* Set a maximum width */
+}
+
+.liApp {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align text to the left within the card */
+  transition: transform 0.2s; /* Add a transition for hover effect */
+}
+
+.liApp:hover {
+  transform: translateY(-3px); /* Slightly move up on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.liApp p:first-child { /* Style the name */
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #007bff; /* Blue text for the name */
+}
+
+.liApp p:last-child { /* Style the quantity */
+    color: #777;
+}

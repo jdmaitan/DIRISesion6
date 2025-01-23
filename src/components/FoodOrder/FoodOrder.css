@@ -1,0 +1,114 @@
+/* FoodOrder.css */
+.food-order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* Changed to white for a cleaner look */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  margin: 20px auto;
+  max-width: 500px;
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.food-image-container {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.food-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.food-details {
+  width: 100%;
+}
+
+.food-price {
+  font-size: 1.4em; /* Slightly larger price */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #28a745; /* Slightly darker green */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity-controls label {
+  margin-right: 10px;
+  font-weight: bold; /* Bold label */
+}
+
+.quantity-controls input {
+  width: 80px; /* Slightly wider input */
+  padding: 8px; /* Slightly larger padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.1em; /* Slightly larger font */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px; /* Added margin top */
+}
+
+.order-button,
+.return-button {
+  padding: 12px 24px; /* Slightly larger padding */
+  border: none;
+  border-radius: 6px; /* Slightly more rounded corners */
+  cursor: pointer;
+  color: white;
+  font-weight: bold; /* Bold button text */
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.order-button {
+  background-color: #28a745; /* Slightly darker green */
+}
+
+.order-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.order-button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.return-button {
+  background-color: #007bff;
+}
+
+.return-button:hover {
+  background-color: #0069d9; /* Darker blue on hover */
+}
+
+/* Added styles for h3 */
+.food-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.sentFallback {
+  margin-top: 20px;
+  color: #a09e2c; /* Green confirmation message */
+  text-align: center;
+  font-weight: bold;
+}

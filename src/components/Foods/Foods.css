@@ -1,0 +1,49 @@
+.ulFoods {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto; /* Center the list */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
+    grid-gap: 20px;
+    max-width: 1000px; /* Limit width on larger screens */
+  }
+  
+  .liFoods {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Important for consistent image sizing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .liFoods:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .foodImg {
+    width: 100%;
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  }
+  
+  .foodItem {
+    padding: 20px;
+  }
+  
+  .foodDesc {
+    margin-bottom: 10px;
+  }
+  
+  .foodPrice {
+    font-weight: bold;
+    text-align: right; /* Align price to the right */
+    color: #007bff; /* Example: Blue price */
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    .ulFoods {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax for smaller screens */
+    }
+  }
