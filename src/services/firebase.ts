@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { MenuItem } from "./entities/entities";
+import { MenuItem } from "../entities/entities";
 import { getDatabase, push, ref } from "firebase/database";
-import logger from "./services/logger";
+import logger from "./logger";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC2eim7o52-1qm8JHc8KpeReeMtmvILGdU",

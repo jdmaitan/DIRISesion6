@@ -2,7 +2,7 @@ import React, { MouseEventHandler, useContext, useState } from 'react';
 import { MenuItem } from '../../entities/entities';
 import "./FoodOrder.css";
 import { foodItemsContext } from '../../App';
-import addItem from "../../firebase";
+import addItem from "../../services/firebase";
 import logger from '../../services/logger';
 import ErrorBoundary from '../ErrorBoundary';
 import OrderSentMessage from '../OrderSentMessage/OrderSentMessage';
@@ -31,19 +31,19 @@ function FoodOrder(props: FoodOrderProps)
 
         if (isNaN(newQuantity))
         {
-            logger.error(`Se ha intentando hacer un pedido con una cantidad no numerica`);
+            logger.warn(`Se está intentando hacer un pedido con una cantidad no numerica`);
             setQuantityError(true);
         }
 
         if (newQuantity < 1)
         {
-            logger.error(`Se ha intentando hacer un pedido con una cantidad negativa`);
+            logger.warn(`Se está intentando hacer un pedido con una cantidad negativa`);
             setQuantityError(true);
         }
 
         if (newQuantity > menuItems.find(i => i.id === props.food.id)!.quantity)
         {
-            logger.error(`Se ha intentando hacer un pedido de una cantidad mayor al stock`);
+            logger.warn(`Se está intentando hacer un pedido de una cantidad mayor al stock`);
             setQuantityError(true);
         }
 
